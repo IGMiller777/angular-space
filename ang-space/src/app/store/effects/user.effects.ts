@@ -4,8 +4,10 @@ import {IAppState} from '../state/app.state';
 import {select, Store} from '@ngrx/store';
 import {EUserActions, GetUser, GetUsers, GetUsersSuccess, GetUserSuccess} from '../actions/user.actions';
 import {map, of, switchMap, withLatestFrom} from 'rxjs';
-import {HttpContext} from '@angular/common/http';
 import {selectUserList} from '../selectors/user.selectors';
+import {IUserHttp} from '../../interfaces/user.interface';
+import {UserService} from '../../services/user.service';
+
 @Injectable()
 export class UserEffects {
   getUser$ = createEffect(() =>
@@ -14,7 +16,7 @@ export class UserEffects {
       map(action => action.payload),
       withLatestFrom(this._store.pipe(select(selectUserList))),
       switchMap(([id, users]) => {
-        const selectedUser = users?.filter((u: any) => u.id === +id)[0];
+        const selectedUser = users?.filter(user => user.id === +id)[0];
         return of(new GetUserSuccess(selectedUser));
       })
     )

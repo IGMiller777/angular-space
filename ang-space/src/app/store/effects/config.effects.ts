@@ -3,6 +3,7 @@ import {Actions, createEffect, ofType} from '@ngrx/effects';
 import {of, switchMap} from 'rxjs';
 import {EConfigAction, GetConfig, GetConfigSuccess} from '../actions/config.actions';
 import {IConfig} from '../../interfaces/user.interface';
+import {ConfigService} from '../../services/config.service';
 
 @Injectable()
 export class ConfigEffects {

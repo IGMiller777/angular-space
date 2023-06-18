@@ -32,7 +32,7 @@ export class GetUser implements Action {
 export class GetUserSuccess implements Action {
   public readonly type = EUserActions.GetUserSuccess;
 
-  constructor(public payload: IUser[]) {
+  constructor(public payload: IUser | undefined) {
   }
 }
 

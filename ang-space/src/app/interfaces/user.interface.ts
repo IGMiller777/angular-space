@@ -9,3 +9,8 @@ export interface IConfig {
   adminName: string;
   permissions?: string[];
 }
+
+
+export interface IUserHttp {
+  users: IUser[];
+}
