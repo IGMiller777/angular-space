@@ -10,11 +10,13 @@ import {BooksEffect} from "./store/books.effect";
 import {FormsModule} from "@angular/forms";
 import {BooksService} from "./books.service";
 import {HttpClientModule} from "@angular/common/http";
+import { AddComponent } from './add/add.component';
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    AddComponent
   ],
   imports: [
     CommonModule,
