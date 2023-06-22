@@ -7,16 +7,22 @@
       "cost": 520
     },
     {
-      "id": 2,
-      "author": "Lewis Carroll",
-      "name": "Alice's Adventures in Wonderland",
-      "cost": 340
-    },
-    {
       "id": 3,
       "author": "asdasdasd",
       "name": "ASDASDASD",
       "cost": 22222
+    },
+    {
+      "id": 4,
+      "author": "asdas",
+      "name": "ASDASDASD",
+      "cost": 222
+    },
+    {
+      "id": 5,
+      "author": "asdasdasd",
+      "name": "ASDASDASD",
+      "cost": 0
     }
   ]
 }

@@ -11,12 +11,16 @@ import {FormsModule} from "@angular/forms";
 import {BooksService} from "./books.service";
 import {HttpClientModule} from "@angular/common/http";
 import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    AddComponent
+    AddComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,
