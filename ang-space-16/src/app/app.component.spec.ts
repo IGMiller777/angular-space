@@ -1,8 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {FirstComponent} from "./first/first.component";
-import {SecondComponent} from "./second/second.component";
 import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 xdescribe('AppComponent', () => {
@@ -16,18 +14,5 @@ xdescribe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'ang-space-16'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('ang-space-16');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ang-space-16 app is running!');
   });
 });
