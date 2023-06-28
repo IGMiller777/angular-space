@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest --watch",
-    "test-reporter": "jest --watch --reporters=default --reporters=jest-html-reporter",
+    "test-reporter": "jest --reporters=default --reporters=jest-html-reporter",
     "test:coverage": "jest --coverage"
   },
   "private": true,
@@ -31,6 +31,9 @@
     "@angular-devkit/build-angular": "^16.1.0",
     "@angular/cli": "~16.1.0",
     "@angular/compiler-cli": "^16.1.0",
+    "@testing-library/angular": "^14.1.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "jest-html-reporter": "^3.10.1",
@@ -39,6 +42,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-mocks": "^14.11.0",
     "typescript": "~5.1.3"
   },
   "jest": {

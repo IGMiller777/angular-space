@@ -1,17 +1,25 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
-xdescribe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent]
-  }));
+describe('AppComponent', () => {
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ang-space-16 app is running!');
+  let fixture: AppComponent;
+  let authServiceMoth: any;
+
+  beforeEach(() => {
+    authServiceMoth = {
+      isLoggedIn: jest.fn()
+    };
+    fixture = new AppComponent(
+      authServiceMoth
+    )
   });
+
+  describe('Setup Component', () => {
+    it('Should be initialized', () => {
+      fixture.authService = authServiceMoth;
+      expect(fixture.currentyear).toBe(new Date().getFullYear());
+    });
+
+
+  })
 });
